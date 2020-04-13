@@ -8,18 +8,18 @@ class TreeNode:
         self.right = None
 
 def diameterOfBinaryTree(root):
-    self.height = 1
+    height = 1
 
     def height(node):
         if node is None:
             return 0
         l_height = height(node.left)
         r_height = height(node.right)
-        self.height = max(self.height,l_height+r_height+1)
+        height = max(height,l_height+r_height+1)
         return max(l_height,r_height) + 1
 
     height(root)
-    return self.height-1
+    return height-1
 
         
         
