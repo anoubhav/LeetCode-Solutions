@@ -6,15 +6,17 @@
 import heapq
 
 def lastStoneWeight(stones):
+    # Negate the elements to convert MinHeap to a MaxHeap. Python implementation of heapq is of Minimum Heap.
     stones = [-1*i for i in stones]
 
+    # O(N) to transform list into a priority queue
     heapq.heapify(stones)
     while len(stones)>1:
-        x1 = heapq.heappop(stones) # O(log N)
+        x1 = heapq.heappop(stones) # O(log N) - Remove heaviest stone, mantaining the heap invariant.
         x2 = heapq.heappop(stones) # O(log N)
 
         if x1!=x2:
-            heapq.heappush(stones, x1-x2) # O(log N)
+            heapq.heappush(stones, x1-x2) # O(log N) - Add a value to the heap, mantaining the heap invariant.
     
     # Reverse the negation
     return -stones[0] if len(stones) else 0
