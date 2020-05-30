@@ -16,6 +16,6 @@ def my_soln(target, arr):
 def discpage(target, arr):
     import collections
 
-    # return sorted(target) == sorted(A)
-    return collections.Counter(target) == collections.Counter(A)
+    # return sorted(target) == sorted(arr)
+    return collections.Counter(target) == collections.Counter(arr)
         

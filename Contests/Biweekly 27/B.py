@@ -1,6 +1,6 @@
 def my_soln(s, k):
     d = set()
-    for ind, i in enumerate(s):
+    for ind in range(len(s)):
         if ind+k<=len(s):
             w = s[ind:ind+k]
             d.add(w)

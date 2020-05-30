@@ -1,6 +1,6 @@
 
 # DFS (using recursion) for each starting node (max 100), full traversal each time.
-def my_soln(prerequisites, queries):
+def my_soln(n, prerequisites, queries):
     # Time complexity: O(N*(N+E)) ; Space complexity: O(N*N).
 
     # When I got TLE, I performed DFS for each query. Time complexity: O(Q*(N+E)). Space complexity: O(N*N) for graph
@@ -47,7 +47,7 @@ def my_soln(prerequisites, queries):
 
 
 # BFS (using queue) for each query (max 10^4), break if target found.
-def discpage_bfs(prerequisites, queries):
+def discpage_bfs(n, prerequisites, queries):
     # Time complexity: O(Q*(N+E)). This works, and DFS does not because we can break early when target is found instead of performing full traversal.
     graph = [[] for _ in range(n)]
     for u, v in prerequisites:
@@ -72,7 +72,7 @@ def discpage_bfs(prerequisites, queries):
     return ans
                 
 
-def floyd_warshall_algorithm(prerequisites, queries):
+def floyd_warshall_algorithm(n, prerequisites, queries):
     # Time complexity: O(N^3). Space complexity: O(N^2)
     
     connected = [[False]*n for i in range(n)]
