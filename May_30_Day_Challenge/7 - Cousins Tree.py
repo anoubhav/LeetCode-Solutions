@@ -6,7 +6,7 @@ class TreeNode:
         self.right = right
 
 # DFS solution; faster than 97% of the users
-def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
+def isCousins_dfs(root: TreeNode, x: int, y: int) -> bool:
 
     x_parent, x_depth, y_parent, y_depth = None, None, None, None
     
@@ -40,7 +40,7 @@ def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
         return False
 
 # BFS solution
-def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
+def isCousins_bfs(root: TreeNode, x: int, y: int) -> bool:
     from collections import deque
 
     soln = {}
