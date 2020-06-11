@@ -22,6 +22,7 @@ def leafSimilar(root1: TreeNode, root2: TreeNode) -> bool:
     
     return lvs1 == lvs2
 
+import itertools
 def leafSimilar_yield(root1: TreeNode, root2: TreeNode) -> bool:
     def dfs(node):
             if not node: return
