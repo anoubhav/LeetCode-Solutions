@@ -1,5 +1,5 @@
 def containsDuplicatesSet(arr):
-    # Time complexity: O(N), space complexity: O(N)
+    # Time complexity: O(N), space complexity: O(N) (constant space if only lowercase alphabet)
     s = set()
     for i in arr:
         if i in s:
